@@ -1,10 +1,5 @@
 services:
-  - type: web
+  - type: static
     name: lbap-corporate
-    runtime: static
     buildCommand: npm install && npm run build
-    staticPublishDir: dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+    publishPath: dist
