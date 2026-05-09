@@ -16,24 +16,22 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-white text-lbap-dark flex flex-col font-sans">
-        <Header />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/machineries" element={<Machineries />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/csr" element={<CSR />} />
-            <Route path="/career" element={<Career />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="min-h-screen bg-white text-lbap-dark flex flex-col font-sans">
+      <Header />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/machineries" element={<Machineries />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/csr" element={<CSR />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
