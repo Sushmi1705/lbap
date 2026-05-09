@@ -1,10 +1,7 @@
-services:
-  - type: web
-    name: lbap-corporate
-    env: static
+static_sites:
+  - name: lbap-corporate
     buildCommand: npm install && npm run build
-    staticPublishDir: dist
+    publishDir: dist
     routes:
-      - type: rewrite
-        source: /*
+      - source: /*
         destination: /index.html
