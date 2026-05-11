@@ -30,12 +30,9 @@ const About = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=100&w=2000" 
+            src="/images/gallery-hero.png" 
             alt="Industrial Machinery" 
             className="w-full h-full object-cover"
-            onError={(e) => {
-              e.currentTarget.src = "https://images.pexels.com/photos/2569839/pexels-photo-2569839.jpeg?auto=compress&cs=tinysrgb&w=1400";
-            }}
           />
           {/* Dark Gradient starting from the LEFT */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
@@ -164,7 +161,7 @@ const About = () => {
               </div>
             </div>
             <div className="w-full lg:w-1/2 h-[500px] lg:h-auto relative">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=90&w=1200" alt="Tech" className="w-full h-full object-cover grayscale" />
+              <img src="/images/team.png" alt="Tech" className="w-full h-full object-cover grayscale" />
             </div>
           </div>
         </div>

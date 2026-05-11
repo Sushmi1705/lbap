@@ -55,7 +55,7 @@ const Gallery = () => {
             className="relative w-full h-[500px] md:h-[700px] rounded-sm overflow-hidden shadow-2xl bg-gray-100 will-change-transform"
           >
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600" 
+              src="/images/gallery-hero.png" 
               alt="Sterile White Room Factory" 
               className="w-full h-full object-cover"
               loading="eager"
@@ -98,17 +98,17 @@ const Gallery = () => {
             {[
               { 
                 title: "Press Shop", 
-                img: "https://images.unsplash.com/photo-1504917595217-d4ce5eb92815?auto=format&fit=crop&q=70&w=800",
+                img: "/images/press-shop.png",
                 desc: "High-tonnage stamping line for structural chassis components with micron-level tolerance control."
               },
               { 
                 title: "Assembly", 
-                img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=70&w=800",
+                img: "/images/assembly-line.png",
                 desc: "Automated robotic synchronization for drivetrain integration and final body assembly."
               },
               { 
                 title: "QC Lab", 
-                img: "https://images.unsplash.com/photo-1581092324631-039a3007b58c?auto=format&fit=crop&q=70&w=800",
+                img: "/images/qc-lab.png",
                 desc: "Advanced metrology and stress testing facility ensuring global compliance standards."
               }
             ].map((sector, idx) => (
@@ -152,10 +152,10 @@ const Gallery = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: "https://images.unsplash.com/photo-1530124560676-587cabee12f2?auto=format&fit=crop&q=70&w=800", ref: "REF: GRS-01" },
-              { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=70&w=800" },
-              { img: "https://images.unsplash.com/photo-1565439390234-c09a8ebf85eb?auto=format&fit=crop&q=70&w=800" },
-              { img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=70&w=800" }
+              { img: "/images/macro-part-1.png", ref: "REF: GRS-01" },
+              { img: "/images/macro-part-2.png" },
+              { img: "/images/macro-part-3.png" },
+              { img: "/images/macro-part-4.png" }
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -165,7 +165,7 @@ const Gallery = () => {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="relative group overflow-hidden rounded-sm h-[450px] shadow-lg bg-gray-100 will-change-transform"
               >
-                <img src={item.img} alt="Macro Detail" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <img src={item.img} alt={`Macro Detail ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                 {item.ref && (
                   <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-4 py-2 text-[11px] font-bold tracking-[0.3em] text-[#191C1E] uppercase border border-lbap-border">

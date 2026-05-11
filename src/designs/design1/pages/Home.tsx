@@ -71,7 +71,7 @@ const Home = () => {
           >
             <div className="relative w-full overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=100&w=1200" 
+                src="/images/assembly-line.png" 
                 alt="Robotic Assembly" 
                 className="w-full h-[500px] object-cover"
               />
@@ -160,7 +160,7 @@ const Home = () => {
             ].map((prod, idx) => (
               <motion.div key={idx} variants={fadeInUp} className="group cursor-pointer">
                 <div className="h-[220px] overflow-hidden mb-6 border border-[#E2E8F0]">
-                  <img src={prod.img} alt={prod.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={idx === 0 ? "/images/assembly-line.png" : idx === 1 ? "/images/macro-part-4.png" : "/images/press-shop.png"} alt={prod.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <p className="text-[#0B96AC] text-[10px] font-bold tracking-wider mb-1">{prod.unit}</p>
                 <h3 className="text-[18px] font-bold text-[#191C1E] mb-2 group-hover:text-[#0B96AC] transition-colors leading-tight">{prod.title}</h3>

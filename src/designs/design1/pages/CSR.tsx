@@ -61,7 +61,7 @@ const CSR = () => {
             className="w-full md:w-[55%] h-64 md:h-full bg-[#191C1E] relative overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80" 
+              src="/images/csr-hero.png" 
               alt="Industrial Assembly" 
               className="w-full h-full object-cover opacity-80 mix-blend-lighten"
             />
@@ -147,7 +147,7 @@ const CSR = () => {
             className="w-full lg:w-1/2 h-[500px] rounded-lg overflow-hidden"
           >
             <img 
-              src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80" 
+              src="/images/compliance.png" 
               alt="Compliance Analysis" 
               className="w-full h-full object-cover grayscale brightness-110"
             />

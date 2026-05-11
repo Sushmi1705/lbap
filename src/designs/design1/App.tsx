@@ -3,6 +3,7 @@ import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 // Pages
 import Home from './pages/Home';
@@ -17,6 +18,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div className="min-h-screen bg-white text-lbap-dark flex flex-col font-sans">
+      <ScrollToTop />
       <Header />
       <main className="flex-grow">
         <Routes>

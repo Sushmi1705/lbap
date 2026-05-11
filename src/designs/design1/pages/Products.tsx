@@ -32,9 +32,9 @@ const Products = () => {
   ];
 
   const products = [
-    { id: '154-AD-MB', name: 'Mounting Bracket', img: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=600' },
-    { id: '712-FG-SB', name: 'Splice Bar', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=600' },
-    { id: '204-AX-HL', name: 'Head Lock', img: 'https://images.unsplash.com/photo-1531266752426-aad4d5fd0b5d?auto=format&fit=crop&q=80&w=600' }
+    { id: '154-AD-MB', name: 'Mounting Bracket', img: '/images/macro-part-1.png' },
+    { id: '712-FG-SB', name: 'Splice Bar', img: '/images/macro-part-2.png' },
+    { id: '204-AX-HL', name: 'Head Lock', img: '/images/macro-part-3.png' }
   ];
 
   return (
@@ -79,7 +79,7 @@ const Products = () => {
           >
             <div className="bg-[#F8FAFC] p-4 rounded-sm border border-[#E2E8F0] shadow-2xl relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1504917595217-d4ce5eb92815?auto=format&fit=crop&q=100&w=1200" 
+                src="/images/gallery-hero.png" 
                 alt="3D Technical Render" 
                 className="w-full h-[550px] object-cover mix-blend-multiply opacity-90"
               />

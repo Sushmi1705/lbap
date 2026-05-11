@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Search, Settings } from 'lucide-react';
+import { Target, Search, Settings, Download, Play } from 'lucide-react';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -19,76 +19,87 @@ const staggerContainer = {
 
 const Machineries = () => {
   return (
-    <div className="w-full bg-white font-sans text-lbap-dark overflow-hidden">
+    <div className="w-full bg-white font-['Inter',sans-serif] text-[#191C1E] overflow-hidden">
       
-      {/* 1. Hero Section */}
-      <section className="relative h-[500px] w-full flex flex-col justify-center">
+      {/* 1. Hero Section — Full Screen */}
+      <section className="relative w-full overflow-hidden flex items-center" style={{ minHeight: 'calc(100vh - 73px)' }}>
+        {/* Background industrial image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1565439390234-c09a8ebf85eb?auto=format&fit=crop&q=80" 
-            alt="Infrastructure" 
-            className="w-full h-full object-cover"
+          <img
+            src="/images/press-shop.png"
+            alt="Infrastructure"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[#00A3A8]/80 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#005B5E]/90 to-transparent"></div>
+          {/* Dark navy-teal overlay */}
+          <div className="absolute inset-0" style={{ backgroundColor: '#003E47', opacity: 0.90 }}></div>
         </div>
 
-        <div className="container-custom relative z-10 text-white">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+        {/* Hero Content */}
+        <div className="relative z-10 container-custom !mx-0 py-16">
+
+          {/* INFRASTRUCTURE badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-3 py-1 bg-white/20 text-white text-xs font-bold tracking-widest uppercase mb-6 rounded border border-white/30 backdrop-blur-sm"
+            className="inline-block px-3 py-[5px] bg-[#0B96AC] text-white text-[11px] font-semibold tracking-[0.12em] uppercase mb-6"
           >
             INFRASTRUCTURE
           </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, x: -30 }}
+
+          {/* Main Heading — single line */}
+          <motion.h1
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold mb-4 leading-tight max-w-2xl"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-white text-[32px] font-bold leading-tight mb-5 tracking-tight whitespace-nowrap"
           >
-            Infrastructure & Engineering Excellence
+            Infrastructure &amp; Engineering Excellence
           </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, x: -30 }}
+
+          {/* Subtext — max 2 lines */}
+          <motion.p
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-white/90 text-lg mb-10 max-w-2xl leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.28 }}
+            className="text-white/75 text-[15px] leading-relaxed mb-10 max-w-[520px] overflow-hidden"
+            style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}
           >
-            Laxmi Balaji Automotive Products (LBAP) integrates advanced robotic systems, safe heavy-duty press lines to deliver precision automotive components globally.
+            Laxmi Balaji Automotive Products (LBAP) integrates advanced robotic systems with heavy-duty pressing capabilities to deliver precision automotive components globally.
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+
+          {/* CTA Buttons — same row */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-wrap gap-4"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex flex-row items-center gap-3"
           >
-            <button className="bg-[#00A3A8] text-white px-8 py-3 text-sm font-bold rounded hover:bg-[#008f94] transition-colors border border-[#00A3A8]">
+            <button className="flex-shrink-0 bg-[#0B96AC] hover:bg-[#097b8e] text-white px-6 py-2.5 text-[13px] font-medium tracking-normal transition-colors duration-200">
               Download Infrastructure Deck
             </button>
-            <button className="bg-transparent text-white px-8 py-3 text-sm font-bold rounded border border-white hover:bg-white/10 transition-colors">
+            <button className="flex-shrink-0 bg-transparent hover:bg-white/10 text-white border border-white/70 px-6 py-2.5 text-[13px] font-medium tracking-normal transition-colors duration-200">
               Watch Facility Tour
             </button>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. Capability Matrix */}
-      <section className="section-padding">
+      {/* 2. Capability Matrix — clean white-background section below hero */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-80px" }}
             variants={fadeIn}
             className="mb-10"
           >
-            <h3 className="text-[#00A3A8] text-sm font-bold tracking-widest uppercase mb-2">CAPABILITY MATRIX</h3>
-            <h2 className="text-3xl font-bold text-lbap-dark">Core Machinery Divisions</h2>
+            <h3 className="text-[#00A3A8] text-[11px] font-bold tracking-[0.3em] uppercase mb-2">CAPABILITY MATRIX</h3>
+            <h2 className="text-[#191C1E] text-[28px] font-bold">Core Machinery Divisions</h2>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -96,26 +107,28 @@ const Machineries = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {[
-              { title: "5-Axis Table Boring Machine", img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=400" },
-              { title: "CNC Laser Cutting Machine", img: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400" },
-              { title: "CNC Press Brake-II", img: "https://images.unsplash.com/photo-1565439387796-0391ab1a6da1?auto=format&fit=crop&q=80&w=400" },
-              { title: "CNC 3 - Axis Tube Benders", img: "https://images.unsplash.com/photo-1504917595217-d4ce5eb92815?auto=format&fit=crop&q=80&w=400" },
+              { title: "5-Axis Table Boring Machine", img: "/images/boring-machine.png" },
+              { title: "CNC Laser Cutting Machine", img: "/images/laser-cutter.png" },
+              { title: "CNC Press Brake-II", img: "/images/press-brake.png" },
+              { title: "CNC 3 - Axis Tube Benders", img: "/images/tube-bender.png" },
             ].map((machine, idx) => (
-              <motion.div 
-                key={idx} 
+              <motion.div
+                key={idx}
                 variants={fadeIn}
-                whileHover={{ y: -5 }}
-                className="bg-white border border-lbap-border p-8 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 rounded-lg cursor-pointer"
+                whileHover={{ y: -6 }}
+                className="bg-white border border-[#E2E8F0] p-8 flex flex-col items-center text-center hover:shadow-xl hover:border-[#0B96AC]/30 transition-all duration-300 cursor-pointer"
               >
-                <div className="h-32 w-full mb-6 flex items-center justify-center relative overflow-hidden group">
+                <div className="h-32 w-full mb-5 flex items-center justify-center overflow-hidden group">
                   <img src={machine.img} alt={machine.title} className="max-h-full max-w-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <h4 className="font-semibold text-sm text-lbap-dark">{machine.title}</h4>
+                <h4 className="font-semibold text-[13px] text-[#191C1E] leading-snug">{machine.title}</h4>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
+
+
 
       {/* 3. Technical Inventory (Teal Table) */}
       <section className="pb-16 pt-8">
@@ -204,7 +217,7 @@ const Machineries = () => {
             </div>
 
             <motion.div variants={fadeIn} className="h-64 w-full bg-gray-100 mt-auto overflow-hidden rounded-lg group">
-              <img src="https://images.unsplash.com/photo-1531326233519-c68e54e48810?auto=format&fit=crop&q=80" alt="Industrial Gears" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/macro-part-4.png" alt="Industrial Gears" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </motion.div>
           </motion.div>
 
@@ -217,13 +230,13 @@ const Machineries = () => {
               viewport={{ once: true, margin: "-50px" }}
               className="bg-[#00A3A8] text-white p-10 pb-20 rounded shadow-lg flex-grow"
             >
-              <h3 className="text-xl font-bold mb-8">Metrology & Quality Assurance</h3>
+              <h3 className="text-xl font-bold text-white mb-8">Metrology & Quality Assurance</h3>
               
               <div className="space-y-6">
                 <motion.div whileHover={{ x: 5 }} className="flex gap-4 transition-transform">
                   <div className="mt-1"><Target className="w-5 h-5 text-white/80" /></div>
                   <div>
-                    <h4 className="font-bold text-sm mb-1">Coordinate Measuring Machine (CMM)</h4>
+                    <h4 className="font-bold text-sm text-white mb-1">Coordinate Measuring Machine (CMM)</h4>
                     <p className="text-xs text-white/80 leading-relaxed">Zeiss ACCURA for sub-micron measurement of complex geometric parts.</p>
                   </div>
                 </motion.div>
@@ -231,7 +244,7 @@ const Machineries = () => {
                 <motion.div whileHover={{ x: 5 }} className="flex gap-4 transition-transform">
                   <div className="mt-1"><Search className="w-5 h-5 text-white/80" /></div>
                   <div>
-                    <h4 className="font-bold text-sm mb-1">Profile Projector</h4>
+                    <h4 className="font-bold text-sm text-white mb-1">Profile Projector</h4>
                     <p className="text-xs text-white/80 leading-relaxed">Digital optical comparators for non-contact 2D measurement of blank components.</p>
                   </div>
                 </motion.div>
@@ -239,7 +252,7 @@ const Machineries = () => {
                 <motion.div whileHover={{ x: 5 }} className="flex gap-4 transition-transform">
                   <div className="mt-1"><Settings className="w-5 h-5 text-white/80" /></div>
                   <div>
-                    <h4 className="font-bold text-sm mb-1">Metallurgical Testing</h4>
+                    <h4 className="font-bold text-sm text-white mb-1">Metallurgical Testing</h4>
                     <p className="text-xs text-white/80 leading-relaxed">In-house hardness testing, grain structure analysis, and material fatigue analysis.</p>
                   </div>
                 </motion.div>
